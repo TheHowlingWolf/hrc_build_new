@@ -1,0 +1,102 @@
+/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+
+html h2,
+body h2 {
+  font-size: 15px;
+  color: #1b0908;
+}
+
+#wrapper {
+  opacity: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper.loaded {
+  opacity: 1;
+  transition: 2.5s ease-in-out;
+}
+
+#wrapper #content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#card {
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  perspective: 600px;
+}
+
+#card #front,
+#card #back {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#card #front {
+  transform: rotateY(0deg);
+  overflow: hidden;
+  z-index: 1;
+}
+
+#card #front #top-pic {
+  height: 50%;
+  width: 100%;
+  background-image: url("./img/cardBack.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#card #front #avatar {
+  width: 114px;
+  height: 114px;
+  top: 50%;
+  left: 50%;
+  margin: -77px 0 0 -57px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1.5px rgba(5, 1, 1, 0.5), 0 2px 3px rgba(107, 5, 0, 0.3),
+    0 0 50px 50px rgba(3, 2, 2, 0.473);
+  /* background-image: url("D:/5th sem/High performance Computer Architecture/_DSC0256-01new.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+}
+
+#card #front #info-box {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  display: table;
+  left: 0;
+  bottom: 0;
+  background: rgba(200, 38, 29, 0.7);
+  padding: 50px;
+}
+
+#card .info {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cardbut {
+  position: relative;
+  bottom: 0;
+  margin-top: 145px;
+}
