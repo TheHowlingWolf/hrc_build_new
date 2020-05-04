@@ -5,7 +5,7 @@ import "./members.css";
 
 const Members = ({ member }) => {
   console.log("mem:", member);
-  const pro_pic = `https://hrc-backend.herokuapp.com/api/product/pro_photo/${member.id}`;
+  const pro_pic = `"https://hrc-backend.herokuapp.com/api/product/pro_photo/${member.id}"`;
   const about_p_url = `https://hrc-backend.herokuapp.com/api/product/about_p/${member.id}`;
   const h1_hob_url = `https://hrc-backend.herokuapp.com/api/product/h1_photo/${member.id}`;
   const h2_fun_url = `https://hrc-backend.herokuapp.com/api/product/h2_photo/${member.id}`;
